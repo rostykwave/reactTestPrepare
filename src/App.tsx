@@ -1,6 +1,19 @@
-import React from "react";
+import React, { lazy } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import SharedLayout from './layout/SharedLayout';
+
+const HomePage = lazy(() => import('./pages/HomePage'));
+const BreedsPage = lazy(() => import('./pages/BreedsPage'));
+
 const App: React.FC = () => {
-  return <div className="App"></div>;
+  return (
+    <Routes>
+      <Route path="/" element={<SharedLayout />}>
+        <Route index element={<HomePage />}></Route>
+        <Route path="/breeds" element={<BreedsPage />}></Route>
+      </Route>
+    </Routes>
+  );
 };
 
 export default App;
