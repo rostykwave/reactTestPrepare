@@ -2,15 +2,18 @@ import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
 import Navigation from './common/Navigation/Navigation';
 import {
-  StyledPageLayout,
+  Container,
   StyledPageLeftSide,
   StyledPageRightSide,
 } from './SharedLayout.styled';
 
 const SharedLayout: React.FC = () => {
   return (
-    <StyledPageLayout>
+    <Container>
       <StyledPageLeftSide>
+        <p>Hi, intern!</p>
+        <p>Welcome to MI 2022 Front-end test</p>
+        <p>Lets start using The Cat API</p>
         <Navigation />
       </StyledPageLeftSide>
 
@@ -19,7 +22,7 @@ const SharedLayout: React.FC = () => {
           <Outlet />
         </Suspense>
       </StyledPageRightSide>
-    </StyledPageLayout>
+    </Container>
   );
 };
 

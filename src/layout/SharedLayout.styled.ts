@@ -1,16 +1,28 @@
 import styled from 'styled-components';
 
-export const StyledPageLayout = styled.div`
-  /* position: fixed; */
-  display: flex;
-  justify-content: space-between;
+export const Container = styled.div`
+  width: 1440px;
+  height: 100px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: red;
 `;
+
 export const StyledPageLeftSide = styled.div`
-  position: fixed;
+  position: sticky;
+  /* left: 165px; */
+  /* top: 30px; */
+  width: 446px;
+  margin-left: 165px;
   /* height: 100vh; */
 `;
 export const StyledPageRightSide = styled.div`
   /* background-color: tomato; */
-  margin-left: 730px;
+  /* margin-left: 730px; */
   /* height: 100vh; */
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  width: 680px;
 `;

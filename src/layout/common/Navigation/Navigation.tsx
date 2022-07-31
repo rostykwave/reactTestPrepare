@@ -1,13 +1,23 @@
 import { NavLink } from 'react-router-dom';
-import { StyledNavigation } from './Navigation.styled';
+import { NavCard } from '../NavCard/NavCard';
+import { StyledNavigation, StyledNav } from './Navigation.styled';
 
 const Navigation: React.FC = () => {
   return (
     <StyledNavigation>
       <div>Navigation</div>
-      <nav>
-        <NavLink to="breeds">Breeds</NavLink>
-      </nav>
+      <StyledNav>
+        <NavLink to="breeds">
+          <NavCard />
+        </NavLink>
+        <NavLink to="breeds">
+          <NavCard />
+        </NavLink>
+        <NavLink to="breeds">
+          <NavCard />
+        </NavLink>
+        {/* <NavLink to="breeds">Breeds</NavLink> */}
+      </StyledNav>
     </StyledNavigation>
   );
 };

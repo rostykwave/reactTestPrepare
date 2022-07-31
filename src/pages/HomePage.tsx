@@ -5,16 +5,19 @@ const StyledHero = styled.div`
 `;
 const StyledHeroBg = styled.div`
   background-color: pink;
-  position: absolute;
+  /* position: absolute;
   left: 65px;
-  top: 30px;
+  top: 30px; */
   width: 680px;
   height: 840px;
   z-index: -1;
   border-radius: 20px;
 `;
 const StyledImage = styled.img`
-  transform: scale(1.14);
+  transform: scale(1.139);
+  position: absolute;
+  left: -18px;
+  top: 23px;
 `;
 
 const HomePage: React.FC = () => {
