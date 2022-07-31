@@ -1,18 +1,28 @@
-import React, { useRef } from 'react';
+import React, { useState } from 'react';
+import { IItem } from '../types/todo';
+
+type OnlyTitle = Pick<IItem, 'title'>;
 
 const AddTodo: React.FC = () => {
-  const titleInputRef = useRef<HTMLInputElement>(null);
+  const [todo, titleTodo] = useState<Partial<OnlyTitle>>({});
 
+  function titleHandler(e: React.ChangeEvent<HTMLInputElement>) {
+    titleTodo({ title: e.target.value });
+  }
   function submitHandler(e: React.FormEvent) {
     e.preventDefault();
-    console.log(titleInputRef.current?.value);
+    if (!todo.title) {
+      return;
+    }
+
+    console.log(todo.title);
   }
 
   return (
     <form onSubmit={submitHandler}>
       <div>
         <span>Add Title</span>
-        <input type="text" id="add-todo" ref={titleInputRef} />
+        <input type="text" id="add-todo" onChange={titleHandler} />
       </div>
       <button type="submit">Add todos</button>
     </form>

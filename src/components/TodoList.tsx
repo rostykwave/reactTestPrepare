@@ -1,7 +1,4 @@
-interface IItem {
-  id: number;
-  title: string;
-}
+import { IItem } from '../types/todo';
 
 interface IProps {
   todos: IItem[];
