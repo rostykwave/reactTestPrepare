@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import { IItem } from '../types/todo';
 
+interface IProps {
+  onAddTodo: (todo: IItem) => void;
+}
+
 type OnlyTitle = Pick<IItem, 'title'>;
 
-const AddTodo: React.FC = () => {
+const AddTodo: React.FC<IProps> = props => {
   const [todo, titleTodo] = useState<Partial<OnlyTitle>>({});
 
   function titleHandler(e: React.ChangeEvent<HTMLInputElement>) {
@@ -15,7 +19,8 @@ const AddTodo: React.FC = () => {
       return;
     }
 
-    console.log(todo.title);
+    // console.log(todo.title);
+    props.onAddTodo(todo as IItem);
   }
 
   return (
