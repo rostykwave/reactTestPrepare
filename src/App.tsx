@@ -17,3 +17,8 @@ const App: React.FC = () => {
 };
 
 export default App;
+
+//modern normalise(box-sizing: border-box)
+//Card component
+//Grid
+//All layout
