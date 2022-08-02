@@ -7,7 +7,7 @@ export const StyledNavCard = styled.div`
 `;
 export const ColorlBg = styled.div`
   background-color: #b4b7ff;
-  width: 100%;
+  /* width: 100%; */
   height: 198px;
   border-radius: 20px;
   border: 4px solid rgba(255, 255, 255, 0.6);
