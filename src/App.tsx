@@ -26,7 +26,10 @@ const App: React.FC = () => {
 
 export default App;
 
-//modern normalise(box-sizing: border-box)
-//Card component
+//Redux createSlice
+//API full
 //Grid
+//Dark theme
 //All layout
+//modern normalise(box-sizing: border-box)//done
+//Card component//done

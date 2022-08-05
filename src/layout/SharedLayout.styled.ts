@@ -61,6 +61,3 @@ export const Paragraph = styled.p`
 
   color: #1d1d1d;
 `;
-export const NavigationWrap = styled.p`
-  margin-top: 20px;
-`;

@@ -1,10 +1,10 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
-import { Logo } from './common/Logo/Logo';
+import { Box } from '../styleConfig/Box';
+import { NavBar } from './common/NavBar/NavBar';
 import Navigation from './common/Navigation/Navigation';
 import {
   Container,
-  NavigationWrap,
   Paragraph,
   StyledLeftSideContent,
   StyledPageLeftSide,
@@ -17,16 +17,16 @@ const SharedLayout: React.FC = () => {
   return (
     <Container>
       <StyledPageLeftSide>
-        <Logo />
+        <NavBar />
         <StyledLeftSideContent>
           <Title>Hi, intern!</Title>
           <Subtitle>Welcome to MI 2022 Front-end test</Subtitle>
           <Paragraph>Lets start using The Cat API</Paragraph>
         </StyledLeftSideContent>
 
-        <NavigationWrap>
+        <Box mt="20px">
           <Navigation />
-        </NavigationWrap>
+        </Box>
       </StyledPageLeftSide>
 
       <StyledPageRightSide>
