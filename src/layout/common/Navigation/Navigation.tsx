@@ -6,7 +6,7 @@ const Navigation: React.FC = () => {
   return (
     <StyledNavigation>
       <StyledNav>
-        <NavLink to="voiting">
+        <NavLink to="voting">
           <NavCard content="voiting" />
         </NavLink>
         <NavLink to="breeds">

@@ -1,5 +1,10 @@
+import { NavLink } from 'react-router-dom';
 import LogoImg from '../../../images/logo/Logo.svg';
 
 export const Logo: React.FC = () => {
-  return <img src={LogoImg} alt="Logo" />;
+  return (
+    <NavLink to="/">
+      <img src={LogoImg} alt="Logo" />
+    </NavLink>
+  );
 };

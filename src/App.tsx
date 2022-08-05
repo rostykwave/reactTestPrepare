@@ -1,6 +1,8 @@
 import React, { lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import SharedLayout from './layout/SharedLayout';
+import GalleryPage from './pages/GalleryPage';
+import VotingPage from './pages/VotingPage';
 import { GlobalStyle } from './styleConfig/GlobalStyle';
 
 const HomePage = lazy(() => import('./pages/HomePage'));
@@ -13,6 +15,8 @@ const App: React.FC = () => {
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />}></Route>
           <Route path="/breeds" element={<BreedsPage />}></Route>
+          <Route path="/voting" element={<VotingPage />}></Route>
+          <Route path="/gallery" element={<GalleryPage />}></Route>
         </Route>
       </Routes>
       <GlobalStyle />
