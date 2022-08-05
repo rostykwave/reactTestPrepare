@@ -4,13 +4,20 @@ import {
   ColorlBg,
   StyledNavCard,
 } from './NavCard.styled';
+import { NavCardImage } from './NavCardImage/NavCardImage';
 
-export const NavCard: React.FC = () => {
+interface IProps {
+  content: string;
+}
+
+export const NavCard: React.FC<IProps> = ({ content }) => {
   return (
     <StyledNavCard>
-      <ColorlBg />
+      <ColorlBg content={content}>
+        <NavCardImage content={content} />
+      </ColorlBg>
       <CardLabel>
-        <CardLabelText>Voiting</CardLabelText>
+        <CardLabelText>{content}</CardLabelText>
       </CardLabel>
     </StyledNavCard>
   );

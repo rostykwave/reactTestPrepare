@@ -1,20 +1,32 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
+import { Logo } from './common/Logo/Logo';
 import Navigation from './common/Navigation/Navigation';
 import {
   Container,
+  NavigationWrap,
+  Paragraph,
+  StyledLeftSideContent,
   StyledPageLeftSide,
   StyledPageRightSide,
+  Subtitle,
+  Title,
 } from './SharedLayout.styled';
 
 const SharedLayout: React.FC = () => {
   return (
     <Container>
       <StyledPageLeftSide>
-        <p>Hi, intern!</p>
-        <p>Welcome to MI 2022 Front-end test</p>
-        <p>Lets start using The Cat API</p>
-        <Navigation />
+        <Logo />
+        <StyledLeftSideContent>
+          <Title>Hi, intern!</Title>
+          <Subtitle>Welcome to MI 2022 Front-end test</Subtitle>
+          <Paragraph>Lets start using The Cat API</Paragraph>
+        </StyledLeftSideContent>
+
+        <NavigationWrap>
+          <Navigation />
+        </NavigationWrap>
       </StyledPageLeftSide>
 
       <StyledPageRightSide>

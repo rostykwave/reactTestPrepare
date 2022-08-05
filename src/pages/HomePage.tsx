@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import HomePageHeroIMG from '../images/HomePage/girl-and-pet 1.png';
+
 const StyledHero = styled.div`
   position: relative;
 `;
 const StyledHeroBg = styled.div`
-  background-color: pink;
+  background-color: ${p => p.theme.colors.heroBg};
   /* position: absolute;
   left: 65px;
   top: 30px; */

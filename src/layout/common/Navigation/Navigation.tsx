@@ -5,16 +5,15 @@ import { StyledNavigation, StyledNav } from './Navigation.styled';
 const Navigation: React.FC = () => {
   return (
     <StyledNavigation>
-      <div>Navigation</div>
       <StyledNav>
-        <NavLink to="breeds">
-          <NavCard />
+        <NavLink to="voiting">
+          <NavCard content="voiting" />
         </NavLink>
         <NavLink to="breeds">
-          <NavCard />
+          <NavCard content="breeds" />
         </NavLink>
-        <NavLink to="breeds">
-          <NavCard />
+        <NavLink to="gallery">
+          <NavCard content="gallery" />
         </NavLink>
         {/* <NavLink to="breeds">Breeds</NavLink> */}
       </StyledNav>
