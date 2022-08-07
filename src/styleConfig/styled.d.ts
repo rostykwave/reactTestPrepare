@@ -7,6 +7,10 @@ declare module 'styled-components' {
     borderRadius: string;
 
     colors: {
+      pinkTxt: string;
+      whiteTxt: string;
+      hoverBg: string;
+      activeBg: string;
       heroBg: string;
       votingCardBg: string;
       breedsCardBg: string;

@@ -4,6 +4,10 @@ export const theme: DefaultTheme = {
   borderRadius: '5px',
 
   colors: {
+    pinkTxt: '#FF868E',
+    whiteTxt: '#FFFFFF',
+    hoverBg: '#FBE0DC',
+    activeBg: '#FF868E',
     heroBg: '#FBE0DC',
     votingCardBg: '#B4B7FF',
     breedsCardBg: '#97EAB9',

@@ -1,14 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-export const StyledNavigation = styled.div`
-  /* background-color: aqua; */
-  /* height: 100vh; */
-`;
-
 export const StyledNav = styled.nav`
   display: flex;
-  /* gap: 16px; */
   gap: ${p => p.theme.space[4]}px;
 `;
 
@@ -40,16 +34,17 @@ export const NavItem = styled(NavLink)`
     background-color: ${p => p.theme.colors.galleryCardBg};
   }
 
-  &.active {
-    background-color: ${p => p.theme.colors.votingCardBg};
-    /* color: ${p => p.theme.colors.votingCardBg}; */
+  &.active .textWrap {
+    background-color: ${p => p.theme.colors.activeBg};
+    color: ${p => p.theme.colors.whiteTxt};
   }
   /* .x .y {
     //child class selector
   } */
 
-  :hover:not(.active),
-  :focus-visible:not(.active) {
+  :hover:not(.active) .textWrap,
+  :focus-visible:not(.active) .textWrap {
+    background-color: ${p => p.theme.colors.hoverBg};
     /* color: ${p => p.theme.colors.votingCardBg}; */
   }
 `;
@@ -67,5 +62,5 @@ export const NavText = styled.div`
   letter-spacing: 2px;
   text-transform: uppercase;
 
-  color: #ff868e;
+  color: ${p => p.theme.colors.pinkTxt};
 `;
