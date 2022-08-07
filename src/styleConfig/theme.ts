@@ -11,6 +11,7 @@ export const theme: DefaultTheme = {
     // main: 'cyan',
     // secondary: 'magenta',
   },
+  space: [0, 2, 4, 8, 16, 32, 64, 128, 256],
 };
 
 // export const theme = Object.freeze({

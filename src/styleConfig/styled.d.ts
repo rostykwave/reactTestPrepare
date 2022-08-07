@@ -12,5 +12,7 @@ declare module 'styled-components' {
       breedsCardBg: string;
       galleryCardBg: string;
     };
+
+    space: number[];
   }
 }
