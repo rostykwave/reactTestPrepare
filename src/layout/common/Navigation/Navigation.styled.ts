@@ -14,38 +14,24 @@ export const NavItem = styled(NavLink)`
   flex-direction: column;
   gap: 10px;
   text-decoration: none;
+`;
 
-  & .imageWrap {
-    height: 198px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    border: 4px solid rgba(255, 255, 255, 0.6);
-  }
+export const NavImage = styled.div`
+  height: 198px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: 4px solid rgba(255, 255, 255, 0.6);
 
-  &.voting .imageWrap {
+  ${NavItem}.voting & {
     background-color: ${p => p.theme.colors.votingCardBg};
   }
-  &.breeds .imageWrap {
+  ${NavItem}.breeds & {
     background-color: ${p => p.theme.colors.breedsCardBg};
   }
-  &.gallery .imageWrap {
+  ${NavItem}.gallery & {
     background-color: ${p => p.theme.colors.galleryCardBg};
-  }
-
-  &.active .textWrap {
-    background-color: ${p => p.theme.colors.activeBg};
-    color: ${p => p.theme.colors.whiteTxt};
-  }
-  /* .x .y {
-    //child class selector
-  } */
-
-  :hover:not(.active) .textWrap,
-  :focus-visible:not(.active) .textWrap {
-    background-color: ${p => p.theme.colors.hoverBg};
-    /* color: ${p => p.theme.colors.votingCardBg}; */
   }
 `;
 
@@ -63,4 +49,12 @@ export const NavText = styled.div`
   text-transform: uppercase;
 
   color: ${p => p.theme.colors.pinkTxt};
+
+  ${NavItem}:hover & {
+    background-color: ${p => p.theme.colors.hoverBg};
+  }
+  ${NavItem}.active & {
+    background-color: ${p => p.theme.colors.activeBg};
+    color: ${p => p.theme.colors.whiteTxt};
+  }
 `;

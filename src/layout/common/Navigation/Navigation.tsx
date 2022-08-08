@@ -1,4 +1,4 @@
-import { StyledNav, NavItem, NavText } from './Navigation.styled';
+import { StyledNav, NavItem, NavText, NavImage } from './Navigation.styled';
 import VoitngImg from '../../../images/HomePage/cards/vote-table.png';
 import BreedsImg from '../../../images/HomePage/cards/pet-breeds.png';
 import GalleryImg from '../../../images/HomePage/cards/images-search.png';
@@ -14,10 +14,10 @@ const Navigation: React.FC = () => {
     <StyledNav>
       {navItems.map(({ href, text, icon }) => (
         <NavItem to={href} key={href} className={text}>
-          <div className="imageWrap">
+          <NavImage className={text}>
             <img src={icon} alt={text} />
-          </div>
-          <NavText className="textWrap"> {text}</NavText>
+          </NavImage>
+          <NavText>{text}</NavText>
         </NavItem>
       ))}
     </StyledNav>
